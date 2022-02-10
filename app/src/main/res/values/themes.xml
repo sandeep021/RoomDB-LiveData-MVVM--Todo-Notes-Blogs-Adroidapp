@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/Theme.RoomDBLiveDataMVVMTodoNotesBlogsAdroidapp
+        </item>
+        <item name="itemTextAppearanceInactive">
+            @style/Theme.RoomDBLiveDataMVVMTodoNotesBlogsAdroidapp
+        </item>
+        <!--        <item name="android:listDivider">@color/yamaha_blue</item>-->
+    </style>
 </resources>
