@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+<!--    my colors-->
+    <color name="active_tab_color">#E31111</color>
+    <color name="inactive_tab_color">#635959</color>
 </resources>

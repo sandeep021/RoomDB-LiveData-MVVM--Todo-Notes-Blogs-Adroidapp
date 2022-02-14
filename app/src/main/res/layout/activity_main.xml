@@ -12,12 +12,11 @@
         android:background="@color/white"
         tools:context=".activity.MainActivity">
 
-        <TextView
+        <include
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_alignParentTop="true"
-            android:text="header" />
+            layout="@layout/main_activity_header" />
 
         <FrameLayout
             android:id="@+id/frame_main"
@@ -44,12 +43,11 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
-            style="@style/BottomNavigationView"
+            style="@style/BottomNavigationTheme"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
-            android:backgroundTint="@color/purple_200"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:visibility="visible"
@@ -58,6 +56,7 @@
             app:itemTextAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small"
             app:itemTextColor="@drawable/item_color_state"
             app:itemIconTint="@drawable/item_color_state"
+            app:backgroundTint="@color/white"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/navigation" />
 

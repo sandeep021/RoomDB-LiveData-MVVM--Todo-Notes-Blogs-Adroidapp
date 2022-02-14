@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.RoomDBLiveDataMVVMTodoNotesBlogsAdroidapp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.RoomDBLiveDataMVVMTodoNotesBlogsAdroidapp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,12 +14,8 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="BottomNavigationView">
-        <item name="itemTextAppearanceActive">@style/Theme.RoomDBLiveDataMVVMTodoNotesBlogsAdroidapp
-        </item>
-        <item name="itemTextAppearanceInactive">
-            @style/Theme.RoomDBLiveDataMVVMTodoNotesBlogsAdroidapp
-        </item>
-        <!--        <item name="android:listDivider">@color/yamaha_blue</item>-->
+    <style name="BottomNavigationTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/active_tab_color</item>
+        <item name="android:textColorSecondary">@color/inactive_tab_color</item>
     </style>
 </resources>

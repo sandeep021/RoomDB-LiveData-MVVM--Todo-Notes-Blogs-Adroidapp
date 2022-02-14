@@ -1,14 +1,17 @@
 package com.sandeep.github01.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
 import com.sandeep.github01.CommonUtil.SuperActivity;
-import com.sandeep.github01.CommonUtil.fragments.HomeFragment;
+import com.sandeep.github01.fragments.HomeFragment;
 import com.sandeep.github01.R;
 import com.sandeep.github01.databinding.ActivityMainBinding;
+import com.sandeep.github01.fragments.NewsFragment;
+import com.sandeep.github01.fragments.NotesFragment;
+import com.sandeep.github01.fragments.ProfileFragment;
+import com.sandeep.github01.fragments.TodoFragment;
 
 public class MainActivity extends SuperActivity {
     ActivityMainBinding activityMainBinding;
@@ -25,24 +28,24 @@ public class MainActivity extends SuperActivity {
         activityMainBinding.navigation.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.navigation_todo:
-//                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof VouchersFragment)) {
-//                        gotoFragment(new VouchersFragment(), null, null, mainActivity);
-//                    }
+                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof TodoFragment)) {
+                        gotoFragment(new TodoFragment(), null, null, MainActivity.this);
+                    }
                     return true;
                 case R.id.navigation_notes:
-//                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof HomeShopFragment)) {
-//                        gotoFragment(new HomeShopFragment(), null, null, mainActivity);
-//                    }
+                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof NotesFragment)) {
+                        gotoFragment(new NotesFragment(), null, null, MainActivity.this);
+                    }
                     return true;
-//                case R.id.navigation_my_redemption:
-//                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof MyRedemptionFragment)) {
-//                        gotoFragment(new MyRedemptionFragment(), null, null, mainActivity);
-//                    }
-//                    return true;
+                case R.id.navigation_news:
+                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof NewsFragment)) {
+                        gotoFragment(new NewsFragment(), null, null, MainActivity.this);
+                    }
+                    return true;
                 case R.id.navigation_profile:
-//                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof ProfileFragment)) {
-//                        gotoFragment(new ProfileFragment(), null, null, mainActivity);
-//                    }
+                    if (!(getSupportFragmentManager().findFragmentById(R.id.frame_main) instanceof ProfileFragment)) {
+                        gotoFragment(new ProfileFragment(), null, null, MainActivity.this);
+                    }
                     return true;
                 case R.id.navigation_home:
                 default:
